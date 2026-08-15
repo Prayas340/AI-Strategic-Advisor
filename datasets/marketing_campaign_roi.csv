@@ -1,0 +1,13 @@
+Campaign_ID,Channel,Target_Audience,Ad_Spend_USD,Impressions,Clicks,CPC_USD,Conversions,CPA_USD,Attributed_Revenue_USD,ROAS,Customer_LTV_Forecast_USD,Payback_Period_Months
+CMP-2025-01,Google Search Ads,High Intent B2B,45000,620000,31000,1.45,1240,36.29,186000,4.13,3800,1.8
+CMP-2025-02,LinkedIn Sponsored Content,Enterprise Decision Makers,55000,410000,8200,6.71,320,171.88,290000,5.27,18500,2.6
+CMP-2025-03,Meta Retargeting,Mid-Market Leads,28000,950000,28500,0.98,950,29.47,98000,3.50,2400,2.1
+CMP-2025-04,TikTok Video Ads,Gen-Z & Young Pros,22000,1800000,45000,0.49,680,32.35,44000,2.00,1100,3.4
+CMP-2025-05,Email Lifecycle Automations,Existing Inactive Leads,8500,140000,19600,0.43,890,9.55,85000,10.00,4200,0.6
+CMP-2025-06,Influencer & Thought Leader,Startup Founders,35000,780000,15600,2.24,520,67.31,105000,3.00,5600,2.9
+CMP-2025-07,SEO Content Hub (Inbound),Organic Searchers,18000,1200000,60000,0.30,1800,10.00,216000,12.00,6200,0.8
+CMP-2025-08,YouTube Product Demos,Tech Evaluators,32000,890000,17800,1.80,640,50.00,128000,4.00,4800,2.2
+CMP-2025-09,Google Performance Max,Broad E-comm Buyers,40000,1100000,38500,1.04,1350,29.63,152000,3.80,2900,2.0
+CMP-2025-10,Webinar Sponsorship,C-Level Executives,48000,250000,4500,10.67,190,252.63,260000,5.42,24000,3.1
+CMP-2025-11,Reddit Community Ads,Dev & Data Pros,16000,680000,13600,1.18,410,39.02,48000,3.00,3100,2.8
+CMP-2025-12,Programmatic Display,General Awareness,25000,2100000,16800,1.49,210,119.05,31000,1.24,1900,5.2
