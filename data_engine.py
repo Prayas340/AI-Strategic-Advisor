@@ -432,8 +432,16 @@ def build_composition_chart(df: pd.DataFrame, profile: Dict[str, Any]) -> Option
     return create_theme_layout(fig, title)
 
 
+def safe_to_markdown(sub_df: pd.DataFrame, index: bool = True) -> str:
+    """Safely convert dataframe to markdown or formatted string."""
+    try:
+        return sub_df.to_markdown(index=index)
+    except Exception:
+        return sub_df.to_string(index=index)
+
+
 def generate_dataset_summary_for_ai(df: pd.DataFrame, profile: Dict[str, Any], dataset_name: str) -> str:
-    """Generate dense structured executive summary string for Gemini LLM context."""
+    """Generate dense structured executive summary string for AI context."""
     kpi_lines = [f"- {kpi['label']}: {kpi['value']}" for kpi in profile.get("kpis", [])]
     kpis_text = "\n".join(kpi_lines) if kpi_lines else "None detected"
 
@@ -449,10 +457,10 @@ def generate_dataset_summary_for_ai(df: pd.DataFrame, profile: Dict[str, Any], d
 
     # Statistical describe sample in markdown table
     num_cols_sample = profile.get("numeric_cols", [])[:6]
-    stats_md = df[num_cols_sample].describe().round(2).to_markdown() if num_cols_sample else "No numeric columns"
+    stats_md = safe_to_markdown(df[num_cols_sample].describe().round(2)) if num_cols_sample else "No numeric columns"
 
     # Top 5 records preview
-    preview_md = df.head(5).to_markdown(index=False)
+    preview_md = safe_to_markdown(df.head(5), index=False)
 
     summary = f"""
 === EXECUTIVE DATASET CONTEXT ===
